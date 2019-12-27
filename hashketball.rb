@@ -384,10 +384,6 @@ def winning_team
             return array[-1][:team_name]
 end
 
-
-
-
-
 def player_with_longest_name 
     # see method 'big_shoe_rebounds' for how this works 
     array = [] 
@@ -400,8 +396,6 @@ def player_with_longest_name
    return array[-1][:player_name]
 end
 >>>>>>> 2588ccd3bba0a01d03a008c38c63eea333cb606a
-
-
 
 def most_steals
     array = [] 
