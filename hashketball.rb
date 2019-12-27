@@ -135,7 +135,6 @@ game_hash.each do |key,value|
     end
 end
 
-
 def num_points_scored(name) 
     # iterate through each value of game_hash ('home' and 'away')
     game_hash.each do |key,value| 
@@ -151,11 +150,6 @@ def num_points_scored(name)
         end
     end
 end
-
-
-# test num_points_scored 
-# num_points_scored("Kemba Walker")
-
 
 def shoe_size(name)
     # iterate through each value of game_hash ('home' and 'away')
@@ -173,12 +167,6 @@ def shoe_size(name)
     end    
 end
 
-# shoe_size("Kemba Walker")
-
-
-
-
-
 def team_colors(team_name) 
     game_hash.each do |key,value|
         if value[:team_name] == team_name
@@ -189,11 +177,6 @@ def team_colors(team_name)
     end
 end
 
-
-# team_colors('Charlotte Hornets')
-
-
-# * Build a method, `team_names`, that operates on the game `Hash` to return an `Array` of the team names.
 def team_names()
   array = []
   game_hash.each do |key,value| 
@@ -203,10 +186,6 @@ def team_names()
   return array 
 end
 
-# team_names()
-
-
-# * Build a method, `player_numbers`, that takes in an argument of a team name and returns an `Array` of the jersey numbers for that team.
 def player_numbers(team_name) 
     array = []
     game_hash.each do |key,value| 
@@ -223,13 +202,6 @@ def player_numbers(team_name)
     pp array 
     return array 
 end
-
-# player_numbers('Brooklyn Nets')
-
-
-
-
-
 
 def player_stats(player_name) 
     hash = {}
@@ -251,8 +223,6 @@ def player_stats(player_name)
     return hash 
 end
 
-# player_stats('Brook Lopez')
-
 def big_shoe_rebounds 
     array = []
     # go through each team's players and push their data to the array made above this line 
@@ -268,7 +238,6 @@ def big_shoe_rebounds
     # return the rebounds of the player with the largest shoe size 
     return array[-1][:rebounds]
 end
-
 
 def most_points_scored 
     array = []
@@ -286,27 +255,6 @@ def most_points_scored
     return array[-1][:player_name]
 end
 
-
-# def winning_team 
-#     winning_team_name = 0 
-#     home_team_score = 0 
-#     away_team_score = 0 
-#     game_hash[:home][:players].each do |key,value|
-#         home_team_score += key[:points]
-#     end 
-#     game_hash[:away][:players].each do |key,value|
-#         away_team_score += key[:points]
-#     end 
-    
-#     if home_team_score > away_team_score 
-#         winning_team_name = game_hash[:home][:team_name]
-#     else
-#         winning_team_name = game_hash[:away][:team_name]
-#     end
-#     return winning_team_name
-# end
-
-# winning team tests 
 def winning_team
     array = []
     # iterate through the values of game_hash (home, away) 
@@ -327,10 +275,6 @@ def winning_team
             # return the team name that has the highest score 
             return array[-1][:team_name]
 end
-
-
-
-
 
 def player_with_longest_name 
     # see method 'big_shoe_rebounds' for how this works 
