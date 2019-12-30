@@ -126,15 +126,6 @@ def game_hash()
 }
 end
 
-
-# testing how to iterate through the game_hash NDS 
-game_hash.each do |key,value|
-    # puts value 
-    value[:players].each do |player|
-        # puts player
-    end
-end
-
 def num_points_scored(name) 
     # iterate through each value of game_hash ('home' and 'away')
     game_hash.each do |key,value| 
